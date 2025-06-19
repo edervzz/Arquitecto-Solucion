@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arquitecto de Soluciones</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body style="padding-top: 60px;">
+    <div class="container-xl" style="max-width: 991px;">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+            <div class="container" style="max-width: 991px;">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html" role="button" aria-expanded="false">
+                                Arquitectura de Soluciones
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="arquitectura-software.html" role="button" aria-expanded="false">
+                                Arquitectura de Software
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <h1 class="text-center">Introducción a la Arquitectura de Software</h1>
+
+        <h2>¿Qué es la arquitectura de software?</h2>
+
+        <p>
+            La arquitectura de software se puede entender desde tres perspectivas fundamentales:
+        </p>
+
+        <h4>Visión de alto nivel</h4>
+
+        <p>
+            Es el "esqueleto" o blueprint de un sistema. Define:
+        <ul>
+            <li>
+                Los componentes principales
+            </li>
+            <li>
+                Sus relaciones e interfaces
+            </li>
+            <li>
+                Los entornos de ejecución
+            </li>
+            <li>
+                Cómo estos elementos se integran para satisfacer tanto requisitos funcionales como no funcionales
+                (rendimiento, disponibilidad, seguridad)
+            </li>
+        </ul>
+        </p>
+
+        <h4>Decisiones estratégicas</h4>
+
+        <p>
+            Determina aspectos cruciales como:
+        <ul>
+            <li>
+                Selección de tecnologías
+            </li>
+            <li>
+                Estrategias de escalamiento
+            </li>
+            <li>
+                Patrones arquitectónicos a evitar
+            </li>
+            <li>
+                Decisiones tempranas de alto impacto
+            </li>
+        </ul>
+        </p>
+
+        <h2>¿Qué es el Desarrollo de software?</h2>
+
+        <h4>Visión detallada</h4>
+        <p>
+            Define la implementación específica de cada módulo o componente:
+        <ul>
+            <li>
+                Clases y funciones
+            </li>
+            <li>
+                Estructuras de datos
+            </li>
+            <li>
+                Algoritmos
+            </li>
+            <li>
+                APIs
+            </li>
+            <li>
+                Patrones de Desarrollo a nivel local
+            </li>
+        </ul>
+        </p>
+
+        <h4>Plan de implementación</h4>
+
+        <p>
+        <ul>
+            <li>
+                Guía a los desarrolladores
+            </li>
+            <li>
+                Describe interfaces y relaciones
+            </li>
+            <li>
+                Define métodos para cumplir requisitos funcionales
+            </li>
+        </ul>
+        </p>
+
+        <h4>Enfoque práctico</h4>
+        <p>
+
+            Se centra en aspectos como:
+        <ul>
+            <li>
+                Corrección del código
+            </li>
+            <li>
+                Eficiencia
+            </li>
+            <li>
+                Claridad
+            </li>
+            <li>
+                Facilidad de mantenimiento
+            </li>
+        </ul>
+        </p>
+
+        <h2>Arquitectura vs Desarrollo: Diferencias Clave</h2>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Aspecto</th>
+                    <th scope="col">Arquitectura</th>
+                    <th scope="col">Desarrollo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">Nivel de abstracción</td>
+                    <td>Alto – esqueleto/fundación del sistema</td>
+                    <td>Detallado – módulos individuales</td>
+                </tr>
+                <tr>
+                    <td scope="row">Pregunta clave</td>
+                    <td>¿Qué se construye y dónde?</td>
+                    <td>¿Cómo se construye?</td>
+                </tr>
+                <tr>
+                    <td scope="row">Enfoque principal</td>
+                    <td>Componentes, interacción, calidad del sistema</td>
+                    <td>Clases, métodos, estructuras de datos, algoritmos</td>
+                </tr>
+                <tr>
+                    <td scope="row">Requisitos</td>
+                    <td>Funcionales + No funcionales (seguridad, escalado…)</td>
+                    <td>Principalmente funcionales</td>
+                </tr>
+                <tr>
+                    <td scope="row">Flexibilidad</td>
+                    <td>Rígido – cambios son costosos</td>
+                    <td>Más fácil de cambiar y ajustar</td>
+                </tr>
+                <tr>
+                    <td scope="row">Ejemplos</td>
+                    <td>Microservicios, C4, MVC</td>
+                    <td>Singleton, Strategy, Builder, etc.</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <p>
+            La arquitectura establece la estructura general y las decisiones de Desarrollo de sistemas completos,
+            mientras que el Desarrollo detalla las piezas individuales, definiendo módulos concretos y el flujo
+            interno para materializar la visión arquitectónica.
+        </p>
+
+        <h3>Roles y Responsabilidades</h3>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h4>Arquitecto de Software</h4>
+                </div>
+                <div class="col">
+                    <h4>Desarrollador de Software</h4>
+                </div>
+
+
+            </div>
+
+            <div class="row">
+                <div class="col">
+
+                    <ul>
+                        <li>
+                            Define la estructura general del sistema
+                        </li>
+                        <li>
+                            Selecciona tecnologías y patrones
+                        </li>
+                        <li>
+                            Alinea la arquitectura con objetivos de negocio
+                        </li>
+                        <li>
+                            Balancea aspectos de rendimiento, costo y seguridad
+                        </li>
+                        <li>
+                            Interactúa con stakeholders
+                        </li>
+                        <li>
+                            Documenta decisiones arquitectónicas
+                        </li>
+                        <li>
+                            Lidera visiones cross-equipo (Enterprise vs Solution Architect)
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="col">
+
+                    <ul>
+                        <li>
+                            Traduce la visión arquitectónica en componentes concretos
+                        </li>
+                        <li>
+                            Define clases, interfaces y flujos
+                        </li>
+                        <li>
+                            Implementa algoritmos
+                        </li>
+                        <li>
+                            Desarrolla pruebas unitarias
+                        </li>
+                        <li>
+                            Aplica patrones de Desarrollo (creacional, estructural, comportamental)
+                        </li>
+                        <li>
+                            Se enfoca en la calidad del código
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+        <h1 class="text-center">Principios SOLID</h1>
+
+        <p>
+            Los
+            <a href="https://www.freecodecamp.org/espanol/news/los-principios-solid-explicados-en-espanol/"
+                target="_blank">
+                principios SOLID
+            </a>
+            son cinco principios de diseño de software que ayudan a crear código más flexible, mantenible y escalable.
+            Fueron propuestos
+            por Robert C. Martin y se basan en la programación orientada a objetos.
+        </p>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Principio</th>
+                    <th scope="col">Definición</th>
+                    <th scope="col">Es decir</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">Responsabilidad única</td>
+                    <td>Una clase debe tener una única responsabilidad o función.<br /> Cada módulo o clase debe tener
+                        una única razón para cambiar.</td>
+                    <td>Separar responsabilidades.</td>
+                </tr>
+                <tr>
+                    <td scope="row">Abierto-Cerrado</td>
+                    <td>Agregar nuevas funcionalidades sin modificar el código existente.<br /> Los módulos deben estar
+                        abiertos a extensión, pero cerrados a modificación.</td>
+                    <td>Uso de interfaces, polimorfismo</td>
+                </tr>
+                <tr>
+                    <td scope="row">Sustitución de Liskov</td>
+                    <td>Las clases derivadas deben comportarse de manera coherente con las clases base.<br />Los objetos
+                        de una clase derivada deben poder sustituir a la clase base sin cambiar el comportamiento.</td>
+                    <td>Mantener organizada la jerarquia de clases.</td>
+                </tr>
+                <tr>
+                    <td scope="row">Segregación de Interfaces</td>
+                    <td>Crear interfaces pequeñas o especificas.<br /> Los clientes no deben depender de interfaces que
+                        no usan.</td>
+                    <td>Definir interfaces fragmentadas.</td>
+                </tr>
+                <tr>
+                    <td scope="row">Inversión de Dependencias</td>
+                    <td>Las clases deben depender de abstracciones, no de implementaciones concretas.<br /> Los módulos
+                        de alto nivel no deben depender de los de bajo nivel, ambos deben depender de abstracciones.
+                    </td>
+                    <td>Nunca usar el acoplamiento directo.</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <hr />
+        <h1 class="text-center">Patrones de Diseño</h1>
+
+        <p>
+            Los
+            <a href="https://refactoring.guru/es/design-patterns/what-is-pattern" target="_blank">
+                patrones de diseño (design patterns)
+            </a>
+            son soluciones
+            habituales a problemas comunes en el diseño de
+            software. Cada patrón es como un plano que se
+            puede personalizar para resolver un problema de
+            diseño particular de tu código.
+        </p>
+
+        <h4>Ventajas de los patrones</h4>
+        <p>
+            Los patrones son un juego de herramientas que
+            brindan soluciones a problemas habituales
+            en el diseño de software. Definen un
+            lenguaje común que ayuda a tu
+            equipo a comunicarse
+            con más eficiencia.
+        </p>
+
+        <h4>Clasificación</h4>
+        <p>
+            Los patrones de diseño varían en su complejidad,
+            nivel de detalle y escala de aplicabilidad.
+            Además, pueden clasificarse por su
+            propósito y dividirse en tres grupos: creacionales, estructurales y de comportamiento.
+        </p>
+
+        <hr />
+        <h1 class="text-center">Estilos Arquitectónicos Clásicos</h1>
+
+        <h3>Monolito</h3>
+        <p>
+            Aplicación empaquetada como una sola unidad: UI, lógica de negocio y acceso a datos en el mismo deployment.
+        </p>
+        <p>
+            <b>Ventajas</b>: Desarrollo y despliegue rápidos, un solo repositorio, fácil compartir código (modelos,
+            utilidades) internamente.
+        </p>
+        <p>
+            <b>Desventajas</b>: A medida que crece, mantenimiento y escalabilidad se complican, un cambio puede impactar
+            toda la app. difícil escalado.
+        </p>
+        <p>
+            <b>Cuándo usarlo</b>: MVP o proyectos pequeños, equipos reducidos con necesidad de velocidad de desarrollo.
+        </p>
+
+        <h3>Cliente-Servidor</h3>
+        <p>
+            Consta de dos componentes criticos: Cliente (interface UX) y Servidor (lógica y datos) y establecen
+            comunicación por petición/respuesta.
+        </p>
+        <p>
+            <b>Ventajas</b>: Separación clara de responsabilidades. Puede escalar el servidor.
+        </p>
+        <p>
+            <b>Desventajas</b>: La lógica de negocio queda centralizada; cliente está limitado. Las variantes de
+            arquitectura (1-tier, 2-tier, n-tier) agregan complejidad.
+        </p>
+
+        <h3>Multicapa (Layered / N-Tier)</h3>
+        <p>
+            Descompone el sistema en capas: Presentación, Lógica de negocio, Acceso a datos Cada capa comunica solo con
+            la adyacente.
+        </p>
+        <p>
+            <b>Ventajas</b>: Buena separación de responsabilidades. Permite reemplazar capas independientemente.
+        </p>
+        <p>
+            <b>Desventajas</b>: Puede volverse lento por múltiples pasos. Riesgo de acoplamientos innecesarios.
+        </p>
+        <p>
+            <b>Cuándo usarlo</b>: Enterprise apps con lógica compleja
+        </p>
+
+        <h3>MVC (Model-View-Controller)</h3>
+        <p>
+            Modelo: datos y lógica. Vista: UI. Controlador: conecta usuario y modelo.
+        </p>
+        <p>
+            <b>Ventajas</b>: Alto grado de desacoplamiento. Ideal para apps con múltiples canales de UI.
+        </p>
+        <p>
+            <b>Desventajas</b>: Puede ser complejo de implementar en sistemas no triviales.
+        </p>
+        <p>
+            <b>Cuándo usarlo</b>: Frameworks web/mobile (Django, Rails, ASP.NET).
+        </p>
+
+        <h3>Microkernel (Plug-in)</h3>
+        <p>
+            Core mínimo con funcionalidades básicas, ampliable con plug-ins independientes.
+        </p>
+        <p>
+            <b>Ventajas</b>: Extensible sin tocar el core. Aislamento: un plug-in falla, otros siguen operando
+        </p>
+        <p>
+            <b>Desventajas</b>: Mayor sobrecarga y complejidad en gestión de plug-ins. Comunicación inter-módulos puede
+            ser lenta.
+        </p>
+        <p>
+            <b>Cuándo usarlo</b>: IDEs (Eclipse), sistemas modulares, SOs, plataformas con extensiones.
+        </p>
+
+        <h3>Comparativa de Estilos</h3>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Ventajas principales</th>
+                    <th scope="col">Desventajas principales</th>
+                    <th scope="col">Caso de uso típico</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Monolito</th>
+                    <td>Simplicidad, velocidad</td>
+                    <td>Escalabilidad y mantenimiento complejos</td>
+                    <td>MVPs, prototipos</td>
+                </tr>
+                <tr>
+                    <th scope="row">Cliente-Servidor </th>
+                    <td>Separación lógica, escalabilidad</td>
+                    <td>Lógica concentrada en servidor, variantes complicadas</td>
+                    <td>Apps web clásicas</td>
+                </tr>
+                <tr>
+                    <th scope="row">Multicapa</th>
+                    <td>Separación clara, mantenibilidad</td>
+                    <td>Rendimiento y acoplamientos cruzados</td>
+                    <td>Sistemas enterprise</td>
+                </tr>
+                <tr>
+                    <th scope="row">MVC</th>
+                    <td>Desacoplamiento UI-lógica-datos, reutilizable</td>
+                    <td>Complejo al escalar</td>
+                    <td>Frameworks web, apps con múltiples vistas</td>
+                </tr>
+                <tr>
+                    <th scope="row">Microkernel</th>
+                    <td>Extensible, modular, aislable</td>
+                    <td>Gestión de extensiones costosa, overhead</td>
+                    <td>IDEs, plataformas con plugins</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>
+            Conclusión de estilos arquitectonicos.
+        </h3>
+
+        <ul>
+            <li>
+                Monolito → para arrancar rápido
+            </li>
+            <li>
+                Cliente-Servidor / Multicapa → cuando hay lógica de negocio y UI diferenciada
+            </li>
+            <li>
+                MVC → perfecto para aplicaciones orientadas a UI
+            </li>
+            <li>
+                Microkernel → cuando quieras flexibilidad máxima y extensibilidad
+            </li>
+        </ul>
+
+
+
+        <hr>
+        </hr>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <img height="110px" src="assets/concredito.png" />
+                </div>
+                <div class="col">
+                    <img height="110px" src="assets/yastas.png" />
+                </div>
+                <div class="col">
+                    <img height="110px" src="assets/aterna.png" />
+                </div>
+                <div class="col">
+                    <img height="110px" src="assets/gentera.png" />
+                </div>
+                <div class="col">
+                    <img height="110px" src="assets/compartamos.png" />
+                </div>
+                <div class="col">
+                    <img height="110px" src="assets/fundacion.png" />
+                </div>
+                <div class="col">
+                    <img height="110px" src="assets/financiera.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
