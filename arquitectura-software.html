@@ -61,6 +61,23 @@
         </ul>
         </p>
 
+        <h4>Gestión de la complejidad</h4>
+
+        <p>
+            Proporciona una abstracción para organizar sistemas de gran escala, equilibrando factores críticos como:
+        <ul>
+            <li>
+                Tiempos de respuesta
+            </li>
+            <li>
+                Escalabilidad
+            </li>
+            <li>
+                Costos operativos
+            </li>
+        </ul>
+        </p>
+
         <h4>Decisiones estratégicas</h4>
 
         <p>
@@ -355,6 +372,206 @@
         </p>
 
         <hr />
+        <h1 class="text-center">Estilos Arquitectónicos Modernos</h1>
+
+        <h3>Microservicios</h3>
+        <p>
+            Una arquitectura que divide una aplicación en servicios pequeños e independientes, cada uno con su propia
+            base de datos, lógica de negocio y despliegue.
+        </p>
+        <p>
+            <b>Ventajas</b>:
+        <ul>
+            <li>
+                Escalabilidad independiente: cada servicio puede escalar según demanda
+            </li>
+            <li>
+                Despliegue continuo: permite actualizaciones sin afectar el sistema completo
+            </li>
+            <li>
+                Tolerancia a fallos: si un servicio falla, los demás siguen operando
+            </li>
+            <li>
+                Flexibilidad tecnológica: distintos lenguajes y tecnologías por servicio
+            </li>
+            <li>
+                Equipos autónomos: facilita desarrollo paralelo y ramp-up rápido
+            </li>
+        </ul>
+        </p>
+        <p>
+            <b>Desventajas</b>:
+        <ul>
+            <li>
+                Mayor complejidad operativa: orquestación, monitoreo, CI/CD, descubrimiento de servicios
+            </li>
+            <li>
+                Latencia de red: comunicación vía API introduce sobrecarga
+            </li>
+            <li>
+                Consistencia de datos difícil: cada servicio maneja su propio storage
+            </li>
+            <li>
+                Costos mayores: más infraestructura, bases, pipelines, logs
+            </li>
+            <li>
+                Pruebas y debugging complejos debido a la distribución
+            </li>
+            <li>
+                Requiere cultura DevOps madura y habilidades específicas
+            </li>
+        </ul>
+
+        <p>Nota importante: "If you do not need micro services, do not use them. They will be a pain."</p>
+
+        <h3>Serverless (Function as a Service)</h3>
+        <p>
+            Modelo donde ejecutas funciones en la nube sin gestionar servidores. Se activan por eventos (HTTP, colas,
+            cron), con escalado y facturación automática.
+        </p>
+        <p>
+            <b>Ventajas</b>:
+        <ul>
+            <li>
+                Coste por uso real: solo pagas por ejecución, no por capacidad reservada
+            </li>
+            <li>
+                Sin infra-ops: no hay que gestionar servidores ni parcheo
+            </li>
+            <li>
+                Escalado automático: ajusta capacidad según tráfico
+            </li>
+            <li>
+                Desarrollo rápido: enfócate en la lógica sin preocuparte de entorno
+            </li>
+            <li>
+                Ecosistema maduro: integración fluida con servicios cloud
+            </li>
+        </ul>
+        </p>
+
+
+        <p>
+            <b>Desventajas</b>:
+        <ul>
+            <li>
+                Cold starts: retrasos al invocar funciones inactivas
+            </li>
+            <li>
+                Vendor lock-in: APIs dependientes del proveedor
+            </li>
+            <li>
+                Límites de ejecución: restricción en RAM, CPU, duración
+            </li>
+            <li>
+                Debugging y monitorización complejos
+            </li>
+            <li>
+                Seguridad distribuida: múltiples puntos de entrada, cada función es un vector potencial
+            </li>
+            <li>
+                No ideal para procesamiento prolongado (eternal loops, cargas HPC)
+            </li>
+        </ul>
+
+        </p>
+
+
+        <h3>Comparativa Microservicios vs Serverless</h3>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Característica</th>
+                    <th scope="col">Microservicios</th>
+                    <th scope="col">Serverless</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">Infraestructura</td>
+                    <td>Escalabilidad y mantenimiento complejos</td>
+                    <td>MVPs, prototipos</td>
+                </tr>
+                <tr>
+                    <td scope="row">Cliente-Servidor </td>
+                    <td>Contenedores/VMs + CI/CD</td>
+                    <td>FaaS, gestión infra nula</td>
+                </tr>
+                <tr>
+                    <td>Escalado</td>
+                    <td>Manual/automático por servicio</td>
+                    <td>Totalmente automático</td>
+                </tr>
+                <tr>
+                    <td>Facturación</td>
+                    <td>Recursos provisionados</td>
+                    <td>Solo por ejecución y uso</td>
+                </tr>
+                <tr>
+                    <td>Tiempo de respuesta</td>
+                    <td>Estable, baja latencia</td>
+                    <td>Puede haber "cold start"</td>
+                </tr>
+                <tr>
+                    <td>Desarrollo</td>
+                    <td>Flujo flexible, pero complejo</td>
+                    <td>Muy rápido para funciones específicas</td>
+                </tr>
+                <tr>
+                    <td>Casos típicos</td>
+                    <td>Grandes apps, dominio claro</td>
+                    <td>APIs, ETL, cron jobs, eventos</td>
+                </tr>
+                <tr>
+                    <td>Restricciones</td>
+                    <td>Complejidad operativa alta</td>
+                    <td>Límites de tiempo, vendor lock-in</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <h3>Casos de uso recomendados</h3>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Microservicios</th>
+                    <th scope="col">Serverless</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sistemas grandes, de múltiples dominios</td>
+                    <td>APIs, procesamiento por evento, tareas programadas</td>
+                </tr>
+                <tr>
+                    <td>Equipos autónomos necesitan despliegues independientes</td>
+                    <td>Startups o prototipos con tiempos al mercado reducidos</td>
+                </tr>
+                <tr>
+                    <td>Necesidad de alta disponibilidad sin romper toda la aplicación</td>
+                    <td>Flujos intermitentes donde no se justifica infraestructura manual</td>
+                </tr>
+                <tr>
+                    <td>Escalado granular según carga</td>
+                    <td>Integración con servicios cloud (auth, mailing, colas...)</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <b>Conclusión</b>
+        <p>
+            Usa <b>microservicios</b> cuando necesitas independencia, escalado fino y tienes la infraestructura DevOps
+            para gestionarlos.
+            Usa <b>serverless</b> si buscas rapidez, eficiencia de costos y cargas event-driven ligeras.
+            En <b>proyectos reales, es común combinar ambos</b>: microservicios gestionan dominio central, mientras
+            funcionalidades auxiliares usan serverless.
+        </p>
+
+        <hr />
         <h1 class="text-center">Estilos Arquitectónicos Clásicos</h1>
 
         <h3>Monolito</h3>
@@ -493,7 +710,6 @@
                 Microkernel → cuando quieras flexibilidad máxima y extensibilidad
             </li>
         </ul>
-
 
 
         <hr>
