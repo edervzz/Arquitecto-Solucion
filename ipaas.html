@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arquitecto de Soluciones</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body style="padding-top: 60px;">
+    <div class="container-xl" style="max-width: 991px;">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+            <div class="container" style="max-width: 991px;">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html" role="button" aria-expanded="false">
+                                Arquitectura de Soluciones
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="arquitectura-software.html" role="button" aria-expanded="false">
+                                Arquitectura de Software
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ipaas.html" role="button" aria-expanded="false">
+                                iPaaS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <h1 class="text-center" id="arquitectura-solucion">
+            iPaaS - Integration Platform as a Service
+        </h1>
+
+        <p>
+            La filosofía detrás de un iPaaS se basa en resolver un problema estructural de las organizaciones modernas.
+            La proliferación de sistemas, datos y canales que requieren integración rápida, gobernada y sostenible en el
+            tiempo.
+        </p>
+
+        <h4>¿Qué es un iPaaS?</h4>
+
+        <p>
+            Es una plataforma en la nube diseñada para facilitar, acelerar y estandarizar las integraciones entre
+            aplicaciones, datos y servicios, sin necesidad de desarrollar soluciones punto a punto personalizadas.
+        </p>
+
+        <h4>Filosofía detrás de un iPaaS</h4>
+
+        <ol class="list-group-numbered">
+            <li class="list-group-item">Centralizar la complejidad:
+                <ul>
+                    <li>Las organizaciones tienen múltiples tipos de sistemas: SaaS, on-premise, APIs, eventos,
+                        archivos.</li>
+                    <li>iPaaS proporciona un punto central de gestión y operación de todas las integraciones.</li>
+                    <li>Evita el “spaghetti” de integraciones personalizadas y dispersas.</li>
+                </ul>
+            </li>
+            <li class="list-group-item">Acelerar el time-to-market:
+                <ul>
+                    <li>
+                        Permite crear integraciones complejas mediante interfaces low-code/no-code, conectores
+                        preconstruidos y flujos
+                        reutilizables.
+                    </li>
+                    <li>
+                        Los equipos de negocio o integración pueden configurar flujos sin depender 100% de desarrollo
+                        técnico.
+                    </li>
+                </ul>
+            </li>
+            <li class="list-group-item">Establecer gobierno y trazabilidad
+                <ul>
+                    <li>
+                        Unifica el monitoreo, control de errores, versionado, trazabilidad, cumplimiento normativo
+                        (logs,
+                        encriptación, auditoría).
+                    </li>
+                    <li>
+                        Apoya iniciativas de arquitectura gobernada.
+                    </li>
+                </ul>
+            </li>
+            <li class="list-group-item">Habilitar escalabilidad y flexibilidad
+                <ul>
+                    <li>
+                        Permite escalar sin rediseñar cada integración.
+                    </li>
+                    <li>
+                        Soporta modelos híbridos (on-prem + cloud), multicloud, y expansión por dominios.
+                    </li>
+                </ul>
+            </li>
+            <li class="list-group-item">Reducir el TCO (Total Cost of Ownership) a mediano plazo
+                <ul>
+                    <li>
+                        Aunque hay un costo inicial, se reduce drásticamente el esfuerzo de mantenimiento, soporte, y
+                        rediseño de
+                        integraciones ante cambios.
+                    </li>
+                    <li>
+                        La plataforma ya provee resiliencia, reintentos, encolamiento, transformación, orquestación, sin
+                        reescribir
+                        cada vez.
+                    </li>
+                </ul>
+            </li>
+        </ol>
+
+
+
+        <h4>¿Por qué no hacerlo todo por cuenta propia?</h4>
+        <p>
+            Si bien desarrollar integraciones personalizadas puede parecer más barato al principio, tiene limitaciones
+            claras:
+        </p>
+
+        <div class="container" style="max-width: 800px;">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Integraciones artesanales</th>
+                        <th scope="col">iPaaS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Alto esfuerzo por integración</td>
+                        <td>Reutilización y conectores</td>
+                    </tr>
+                    <tr>
+                        <td>Falta de estandarización</td>
+                        <td>Flujos gobernados</td>
+                    </tr>
+                    <tr>
+                        <td>Bajo monitoreo</td>
+                        <td>Trazabilidad completa</td>
+                    </tr>
+                    <tr>
+                        <td>Difícil de escalar</td>
+                        <td>Arquitectura elástica</td>
+                    </tr>
+                    <tr>
+                        <td>Acoplamiento fuerte</td>
+                        <td>Desacoplamiento natural</td>
+                    </tr>
+                    <tr>
+                        <td>Riesgo técnico en cambios o mantenimiento</td>
+                        <td>Gestión visual, parametrizable</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <h4>Justificación de inversión</h4>
+        <p>
+            El iPaaS se justifica no solo por su funcionalidad técnica, sino por su impacto estratégico:
+        </p>
+
+        <ul>
+            <li>
+                <b>Velocidad</b>: se reducen ciclos de entrega de integraciones de semanas a días.
+            </li>
+            <li>
+                <b>Calidad</b>: disminuye errores y fallas gracias a componentes estandarizados.
+            </li>
+            <li>
+                <b>Governanza</b>: se puede auditar, versionar y monitorear de forma centralizada.
+            </li>
+            <li>
+                <b>Productividad</b>: los equipos técnicos se liberan de tareas repetitivas.
+            </li>
+            <li>
+                <b>Preparación para el cambio</b>: soporta migraciones, fusiones, nuevos canales o productos sin
+                rediseñar toda la
+                arquitectura.
+            </li>
+        </ul>
+
+        <h4>Conclusión</h4>
+
+        <p>
+            La filosofía de un iPaaS es transformar la integración de un problema técnico disperso a una capacidad
+            estratégica gestionada y escalable. Se deja de “construir conexiones” para empezar a <b>gestionar flujos de
+                negocio
+                interconectados</b> de forma ordenada, visible y sostenible.
+        </p>
+
+
+        <hr />
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <img height="110px" src="assets/concredito.png" />
+                </div>
+                <div class="col">
+                    <img height="110px" src="assets/yastas.png" />
+                </div>
+                <div class="col">
+                    <img height="110px" src="assets/aterna.png" />
+                </div>
+                <div class="col">
+                    <img height="110px" src="assets/gentera.png" />
+                </div>
+                <div class="col">
+                    <img height="110px" src="assets/compartamos.png" />
+                </div>
+                <div class="col">
+                    <img height="110px" src="assets/fundacion.png" />
+                </div>
+                <div class="col">
+                    <img height="110px" src="assets/financiera.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
