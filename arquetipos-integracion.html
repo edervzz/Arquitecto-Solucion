@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -102,6 +102,69 @@
                     <tr>
                         <th scope="row">Casos de uso</th>
                         <td>Flujos de originación, alta de clientes con validaciones, flujos de aprobación</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        
+        <h2>Webhook / Event Notification</h2>
+
+        <p>Notificación en tiempo real dede un sistema a otro cuando ocurre un evento (push), sin necesidad de polling.</p>
+
+        <div class="container" style="">
+            <table class="table table-hover">
+                <tbody>
+                    <tr>
+                        <th scope="row">Estilo</th>
+                        <td>Integración centrada en eventos</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Patrones</th>
+                        <td>Stream Processor as a service</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Buenas practicas</th>
+                        <td>Registro de fallas o monitoreo de eventos, configuración de reintentos, validar origen con tokens o firmas</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Malas practicas</th>
+                        <td>Bloquear el flujo por fallas en el receptor, no asegurar la entrega</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Casos de uso</th>
+                        <td>Notificación de pagos en apps, aviso de operaciones sospechosas, envío de confirmaciones</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Pub/Sub (EDA)</h2>
+
+        <p>Múltiples sistemas se siscrien a eventos sin que el publicado los conozca permitendo un desacoplamiento total.</p>
+
+        <div class="container" style="">
+            <table class="table table-hover">
+                <tbody>
+                    <tr>
+                        <th scope="row">Estilo</th>
+                        <td></td>    
+                    </tr>
+                    <tr>
+                        <th scope="row">Patrones</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Buenas practicas</th>
+                        <td>Registro de fallas o monitoreo de eventos, configuración de reintentos, validar origen con tokens o firmas</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Malas practicas</th>
+                        <td>Bloquear el flujo por fallas en el receptor, no asegurar la entrega</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Casos de uso</th>
+                        <td>Notificación de pagos en apps, aviso de operaciones sospechosas, envío de confirmaciones</td>
                     </tr>
                 </tbody>
             </table>
