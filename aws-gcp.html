@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Comparativa AWS-GCP</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body style="padding-top: 60px;">
+    <div class="container-xl" style="max-width: 991px;">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+            <div class="container" style="max-width: 991px;">
+                <div class="navbar-brand" href="#">SD Arquitectura Soluciones Core</div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html" role="button" aria-expanded="false">
+                                Regresar
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <h1 class="text-center" id="arquitectura-solucion">
+            Tabla comparativa de servicios AWS - GCP
+        </h1>
+
+        <p>
+            Tabla con los principales servicios equivalentes entre AWS y GCP.
+        </p>
+
+
+
+
+        <div class="container">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Función / dominio</th>
+                        <th scope="col">AWS</th>
+                        <th scope="col">GCP</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cómputo serverless</td>
+                        <td>Lambda</td>
+                        <td>Cloud Functions</td>
+                    </tr>
+                    <tr>
+                        <td>Contenedores gestionados</td>
+                        <td>ECS / Fargate / EKS</td>
+                        <td>Cloud Run / GKE</td>
+                    </tr>
+                    <tr>
+                        <td>Máquinas virtuales</td>
+                        <td>EC2</td>
+                        <td>Compute Engine</td>
+                    </tr>
+                    <tr>
+                        <td>Autoescalado VMs</td>
+                        <td>Auto Scaling Groups</td>
+                        <td>Managed Instance Groups</td>
+                    </tr>
+                    <tr>
+                        <td>Imágenes de máquina</td>
+                        <td>AMI</td>
+                        <td>Custom Images</td>
+                    </tr>
+                    <tr>
+                        <td>Almacenamiento objetos</td>
+                        <td>S3</td>
+                        <td>Cloud Storage (GCS)</td>
+                    </tr>
+                    <tr>
+                        <td>Archivos distribuidos</td>
+                        <td>EFS</td>
+                        <td>Filestore</td>
+                    </tr>
+                    <tr>
+                        <td>Almacenamiento bloques</td>
+                        <td>EBS</td>
+                        <td>Persistent Disks</td>
+                    </tr>
+                    <tr>
+                        <td>Bases de datos relacionales</td>
+                        <td>RDS (Postgres, MySQL, etc.)</td>
+                        <td>Cloud SQL</td>
+                    </tr>
+                    <tr>
+                        <td>Bases de datos NoSQL key-value</td>
+                        <td>DynamoDB</td>
+                        <td>Firestore / Datastore</td>
+                    </tr>
+                    <tr>
+                        <td>Big Data analítico</td>
+                        <td>Redshift</td>
+                        <td>BigQuery</td>
+                    </tr>
+                    <tr>
+                        <td>Mensajería pub/sub</td>
+                        <td>SNS + SQS</td>
+                        <td>Pub/Sub</td>
+                    </tr>
+                    <tr>
+                        <td>Eventos distribuidos / bus</td>
+                        <td>EventBridge</td>
+                        <td>Eventarc</td>
+                    </tr>
+                    <tr>
+                        <td>Orquestación workflows</td>
+                        <td>Step Functions</td>
+                        <td>Workflows</td>
+                    </tr>
+                    <tr>
+                        <td>ETL orquestado</td>
+                        <td>Glue</td>
+                        <td>Dataflow</td>
+                    </tr>
+                    <tr>
+                        <td>Pipelines ML</td>
+                        <td>SageMaker Pipelines</td>
+                        <td>Vertex AI Pipelines</td>
+                    </tr>
+                    <tr>
+                        <td>Kubernetes gestionado</td>
+                        <td>EKS</td>
+                        <td>GKE</td>
+                    </tr>
+                    <tr>
+                        <td>Functions as API Gateway</td>
+                        <td>API Gateway (Lambda Proxy)</td>
+                        <td>API Gateway (Cloud Functions)</td>
+                    </tr>
+                    <tr>
+                        <td>Administración de APIs</td>
+                        <td>API Gateway / App Mesh</td>
+                        <td>Apigee</td>
+                    </tr>
+                    <tr>
+                        <td>IAM</td>
+                        <td>IAM</td>
+                        <td>IAM</td>
+                    </tr>
+                    <tr>
+                        <td>Control de identidades federadas</td>
+                        <td>Cognito</td>
+                        <td>Identity Platform</td>
+                    </tr>
+                    <tr>
+                        <td>KMS / cifrado</td>
+                        <td>KMS</td>
+                        <td>KMS</td>
+                    </tr>
+                    <tr>
+                        <td>CI/CD</td>
+                        <td>CodePipeline / CodeBuild</td>
+                        <td>Cloud Build</td>
+                    </tr>
+                    <tr>
+                        <td>Repositorios Git</td>
+                        <td>CodeCommit (deprecado)</td>
+                        <td>Source Repositories</td>
+                    </tr>
+                    <tr>
+                        <td>Monitoreo</td>
+                        <td>CloudWatch</td>
+                        <td>Cloud Monitoring (Stackdriver)</td>
+                    </tr>
+                    <tr>
+                        <td>Logs</td>
+                        <td>CloudWatch Logs</td>
+                        <td>Cloud Logging</td>
+                    </tr>
+                    <tr>
+                        <td>Tracing / APM</td>
+                        <td>X-Ray</td>
+                        <td>Cloud Trace</td>
+                    </tr>
+                    <tr>
+                        <td>Config / compliance</td>
+                        <td>Config</td>
+                        <td>Config Connector / Forseti</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <hr />
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <img height="110px" src="assets/concredito.png" />
+                </div>
+                <div class="col">
+                    <img height="110px" src="assets/yastas.png" />
+                </div>
+                <div class="col">
+                    <img height="110px" src="assets/aterna.png" />
+                </div>
+                <div class="col">
+                    <img height="110px" src="assets/gentera.png" />
+                </div>
+                <div class="col">
+                    <img height="110px" src="assets/compartamos.png" />
+                </div>
+                <div class="col">
+                    <img height="110px" src="assets/fundacion.png" />
+                </div>
+                <div class="col">
+                    <img height="110px" src="assets/financiera.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
